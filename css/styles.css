@@ -1,0 +1,454 @@
+/* Establece propiedades por defecto a todos los elementos para mantener uniformidad y simplicidad */
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: "Be Vietnam Pro";
+}
+
+/* Define el color del encabezado principal (h1) basado en una variable CSS */
+h1 {
+	color: var(--color-font-primary);
+}
+
+/* Establece tamaño y color del encabezado secundario (h2) */
+h2 {
+	font-size: xx-large;
+	color: var(--color-font-primary);
+}
+
+/* Estiliza el botón con un diseño particular y colores basados en variables CSS */
+button {
+	border: none;
+	padding: 0.75rem 2rem;
+	border-radius: 30px;
+	color: white;
+	background-color: var(--color-primary);
+}
+
+/* Cambia el cursor al pasar el mouse sobre un botón para indicar interactividad */
+button:hover {
+	cursor: pointer;
+}
+
+/* Añade una sombra a cualquier elemento con la clase "shadowed" */
+.shadowed {
+	box-shadow: 0 4px 7px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Estilo del encabezado de la página */
+header {
+	position: fixed;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.55);
+	backdrop-filter: blur(10px);
+	z-index: 100;
+	padding: 1rem 6rem;
+}
+
+/* Define la estructura del contenedor del encabezado */
+.header-container {
+	display: flex;
+	max-width: var(--max-width);
+	margin: auto;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Estilo de navegación y elementos de navegación */
+nav {
+	display: flex;
+	gap: 2rem;
+}
+.nav-item {
+	color: var(--color-tertiary);
+}
+.nav-disabled {
+	color: grey;
+	cursor: not-allowed;
+}
+
+/* Oculta ciertos elementos relacionados con el menú hamburguesa */
+.nav-hidden-checkbox,
+.hamburger,
+.inverted-border-radius {
+	display: none;
+}
+
+/* Estilo para la introducción de la página */
+.intro {
+	display: flex;
+	max-width: var(--max-width);
+	margin-inline: auto;
+	padding: 7rem 10rem;
+}
+.intro img {
+	width: 50%;
+	aspect-ratio: 1;
+}
+.intro-article {
+	display: flex;
+	width: 50%;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-block: 1rem;
+	padding-inline: 5rem 1rem;
+	text-align: right;
+	align-items: flex-end;
+}
+
+/* Personaliza el botón dentro del elemento .intro-article */
+.intro-article button {
+	text-align: right;
+	width: 8rem;
+}
+
+/* Estilo de la sección media */
+.mid {
+	display: flex;
+	align-items: center;
+	background-color: var(--color-primary);
+	padding-inline: 6rem;
+	color: white;
+}
+.mid-container {
+	display: flex;
+	align-items: center;
+	max-width: var(--max-width);
+	margin: auto;
+}
+.mid h2,
+.mid p {
+	width: 50%;
+	padding-inline: 2rem;
+}
+.mid-cards {
+	padding: 2rem 6rem;
+	display: flex;
+	margin: auto;
+	max-width: var(--max-width);
+	flex-wrap: wrap;
+	background-color: var(--color-quaternary);
+	justify-content: space-around;
+	gap: 2rem;
+}
+.mid-card {
+	width: 45%;
+}
+.mid-card-title {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	font-size: 12px;
+}
+.mid-card-title button {
+	padding-inline: 1.7rem;
+}
+.mid-card p {
+	padding-block: 1rem;
+	padding-left: 6rem;
+	color: var(--color-font-secondary);
+}
+
+/* Estilo para la sección inferior */
+.bottom {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+.bottom-cards {
+	display: flex;
+	gap: 2rem;
+	max-width: var(--max-width);
+	margin: 2rem;
+	padding-inline: 2rem;
+	background-color: var(--color-quaternary);
+}
+.bottom-card {
+	padding-block: 3rem 1rem;
+	position: relative;
+	text-align: center;
+}
+.bottom-card img {
+	position: absolute;
+	top: -35px;
+	left: calc(50% - 35px);
+}
+.bottom-card p {
+	margin-block: 2rem 1rem;
+	color: var(--color-font-secondary);
+}
+
+/* Estilo para el pie de página y pre-pie de página */
+.pre-footer {
+	margin-top: 5rem;
+	background-color: var(--color-primary);
+	padding-inline: 3rem;
+	color: white;
+}
+.pre-footer-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: var(--max-width);
+	margin: auto;
+}
+.pre-footer button {
+	margin-inline: 3rem;
+	color: var(--color-primary);
+	background-color: white;
+	width: 8rem;
+	height: 3rem;
+}
+footer {
+	color: white;
+	background-color: var(--color-tertiary);
+	text-align: center;
+	padding: 2rem;
+}
+.footer {
+	display: flex;
+	margin: auto;
+	max-width: var(--max-width);
+	padding: 2rem;
+	justify-content: space-around;
+}
+.footer a {
+	color: white;
+}
+.footer-icons {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.footer-icons img {
+	height: 1.5rem;
+}
+.footer-links {
+	display: flex;
+	flex: 2;
+	gap: 2rem;
+}
+.footer-link {
+	display: flex;
+	text-align: left;
+	flex: 1;
+	font-weight: 100;
+	gap: 1rem;
+	flex-direction: column;
+}
+.footer-link a {
+	width: fit-content;
+}
+form {
+	display: flex;
+	flex-wrap: nowrap;
+	position: relative;
+	gap: 0.5rem;
+}
+form input {
+	border: none;
+	padding: 0.75rem 1.5rem;
+	border-radius: 30px;
+	color: black;
+	transition: all 0.5s ease-in-out;
+}
+
+/* ... otros estilos del footer ... */
+
+form input:empty ~ label {
+	position: absolute;
+	font-size: small;
+	color: var(--color-font-primary);
+	top: 12px;
+	left: 2rem;
+	background-color: rgba(255, 255, 255, 0.85);
+	border-radius: 4px;
+	padding: 0.2rem;
+	transition: 0.3s;
+}
+form input:focus ~ label,
+form input:valid ~ label {
+	font-size: x-small;
+	top: -10px;
+	left: 14px;
+}
+form button {
+	padding-inline: 1.5rem;
+}
+.footer-update {
+	height: 3rem;
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+}
+.footer-copyright {
+	color: var(--color-font-tertiary);
+	text-align: right;
+	margin-inline: auto;
+	padding-inline: 2rem;
+	max-width: var(--max-width);
+}
+
+/* Media queries para adaptación a pantallas menores de 970px */
+@media (max-width: 970px) {
+	/* Estilos específicos para el header en dispositivos móviles */
+	header {
+		padding: 2rem;
+		backdrop-filter: none;
+		background-color: rgba(255, 255, 255, 0.85);
+	}
+	nav {
+		flex-direction: column;
+		width: 12rem;
+		border-radius: 0px 0px 0px 15px;
+		padding: 1rem 1.5rem;
+		gap: 0.5rem;
+		position: absolute;
+		top: 90px;
+		right: -220px;
+		background-color: rgba(255, 255, 255, 0.85);
+		transition: all 0.5s ease-in-out;
+	}
+	.nav-hidden-checkbox:checked ~ nav {
+		transition: all 0.5s ease-in-out;
+		transform: translateX(-180px);
+	}
+	nav::before {
+		content: "";
+		position: absolute;
+		top: 0px;
+		display: block;
+		left: -25px;
+		height: 25px;
+		width: 25px;
+		background-image: radial-gradient(circle at 0% 100%, transparent 25px, rgba(255, 255, 255, 0.85) calc(25px + 1px));
+	}
+	.nav-hidden-checkbox:checked ~ .hamburger {
+		transition: all 0.5s ease-in-out;
+		background-image: url("../img/icon-close.svg");
+		transform: rotate(90deg);
+	}
+
+    .hamburger {
+		display: block;
+		transition: all 0.5s ease-in-out;
+		background-image: url("../img/icon-hamburger.svg");
+		background-size: auto;
+		background-repeat: no-repeat;
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+	.hamburger:hover {
+		cursor: pointer;
+	}
+	.nav-responsive {
+		display: none;
+	}
+	
+
+	/* Estilos específicos para la introducción en dispositivos móviles */
+	.intro {
+		flex-direction: column;
+		padding: 7rem 2rem 2rem;
+	}
+	.intro img,
+	.intro-article {
+		margin: auto;
+		width: 100%;
+	}
+	.intro-article p {
+		padding-block: 2rem;
+	}
+
+	/* Estilos específicos para la sección Mid en dispositivos móviles */
+	.mid {
+		background-color: var(--color-secondary);
+		padding-inline: 0;
+	}
+	.mid-container {
+		flex-direction: column;
+		padding-bottom: 2rem;
+	}
+	.mid-container h2 {
+		padding-inline: 0;
+		color: var(--color-quaternary);
+	}
+	.mid h2,
+	.mid p {
+		width: 100%;
+		padding-inline: 2rem;
+	}
+	.mid-cards {
+		flex-direction: column;
+		padding: 2rem 2rem;
+		width: 100%;
+	}
+	.mid-cards .mid-card {
+		padding-inline: 0;
+		padding: 0;
+		width: 100%;
+	}
+	.mid-card p {
+		padding: 1rem 0;
+	}
+	.mid-card-title {
+		background-color: var(--color-primary-trans);
+		border-radius: 30px 0 0 30px;
+		width: calc(100% + 2rem);
+	}
+	.hide {
+		display: none;
+	}
+
+	/* Estilos específicos para el pre-footer y el footer en dispositivos móviles */
+	.pre-footer {
+		background-color: var(--color-secondary);
+		padding-inline: 0;
+		padding-bottom: 2rem;
+	}
+	.pre-footer-container {
+		flex-direction: column;
+		font-size: larger;
+		text-align: center;
+	}
+	.pre-footer-container h2 {
+		color: var(--color-quaternary);
+	}
+	.pre-footer button {
+		color: var(--color-quaternary);
+		background-color: var(--color-font-primary);
+		height: 3rem;
+	}
+	/* Fin estilo Pre Footer */
+
+	/* 970px Estilo mobile footer */
+	.footer {
+		flex-direction: column-reverse;
+		padding-inline: 2rem;
+	}
+	.footer-update {
+		margin-block: 1rem 3rem;
+	}
+	.footer-icons {
+		align-items: center;
+		margin-block: 2rem;
+		gap: 1rem;
+		flex-direction: column-reverse;
+	}
+	.footer-icon {
+		display: flex;
+		margin-block: 2rem;
+		width: 100%;
+		justify-content: space-between;
+	}
+	.footer-copyright {
+		text-align: center;
+	}
+}
